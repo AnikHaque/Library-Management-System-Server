@@ -2,6 +2,7 @@ import express, { Application, NextFunction, Request, Response } from "express";
 import cors from "cors";
 import { globalErrorHandler } from "./app/middleware/errorHandler";
 import BookRoutes from "./app/modules/book/book.route";
+import BorrowRoutes from "./app/modules/borrow/borrow.route";
 
 const app: Application = express();
 
@@ -23,6 +24,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/books", BookRoutes);
+app.use("/api/borrow", BorrowRoutes);
 
 // Handle 404 errors for undefined routes
 
