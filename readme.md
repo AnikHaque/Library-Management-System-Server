@@ -6,23 +6,23 @@ A robust, type-safe, and modular REST API built using Express, TypeScript, and M
 
 [Video Explanation Link](https://drive.google.com/file/d/10iEFWFbsCg-rAOUiNfJrVSF6RGsteFt1/view?usp=sharing)
 
-**🚀 Features**
+** Features**
 
-- 📖 CRUD operations for books
+- CRUD operations for books
 
-- 🔄 Borrowing logic with availability tracking
+- Borrowing logic with availability tracking
 
-- 📊 Aggregated borrow summaries
+- Aggregated borrow summaries
 
-- ✅ Zod-powered request validation
+- Zod-powered request validation
 
-- 🧠 Mongoose middleware, static & instance methods
+- Mongoose middleware, static & instance methods
 
-- 🔐 Centralized error handling
+- Centralized error handling
 
-- 🧱 Modular and scalable codebase
+- Modular and scalable codebase
 
-# 📁 Project Structure
+# Project Structure
 
 ```bash
 src/
@@ -61,7 +61,7 @@ src/
 
 ```
 
-**🧪 Technologies Used**
+** Technologies Used**
 
 - Node.js, Express
 
@@ -73,9 +73,9 @@ src/
 
 - ESLint, Prettier for code quality
 
-# 📌 API Endpoints
+# API Endpoints
 
-**🔰 Base URL**
+** Base URL**
 
 ```bash
 http://localhost:5000/
@@ -86,7 +86,7 @@ http://localhost:5000/
 
 Returns a welcome message and available API routes.
 
-**📚 Book Routes**
+** Book Routes**
 `POST /api/books`
 Create a new book.
 
@@ -164,7 +164,7 @@ Returns an aggregated summary:
 ]
 ```
 
-## 🧪 Validation Rules (Zod)
+## Validation Rules (Zod)
 
 **Book:**
 
@@ -178,14 +178,14 @@ Returns an aggregated summary:
 
 - quantity must be positive.
 
-# 🧠 Key Architecture & Concepts
+# Key Architecture & Concepts
 
-- ✅ Zod Validation Layer: Enforces shape of requests
+- Zod Validation Layer: Enforces shape of requests
 
-- 🧩 Service Layer: Business logic is decoupled from controllers
+- Service Layer: Business logic is decoupled from controllers
 
-- 🔄 Mongoose Instance Method: book.updateAvailability() updates availability status dynamically
+- Mongoose Instance Method: book.updateAvailability() updates availability status dynamically
 
-- 📊 Aggregation Pipeline: Used in /api/borrow to compute total borrow count per book
+- Aggregation Pipeline: Used in /api/borrow to compute total borrow count per book
 
-- 🔥 Error Handler: Catches and formats all application errors
+- Error Handler: Catches and formats all application errors
