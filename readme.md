@@ -4,7 +4,7 @@ A robust, type-safe, and modular REST API built using Express, TypeScript, and M
 
 [Live Link](https://library-management-server-main.vercel.app/)
 
-[Video Explanation Link](https://library-management-server-main.vercel.app/)
+[Video Explanation Link](https://drive.google.com/file/d/10iEFWFbsCg-rAOUiNfJrVSF6RGsteFt1/view?usp=sharing)
 
 **🚀 Features**
 
