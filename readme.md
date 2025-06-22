@@ -4,7 +4,7 @@ A robust, type-safe, and modular REST API built using Express, TypeScript, and M
 
 [Live Link](https://library-management-server-main.vercel.app/)
 
-[![Video ReadMe](https://img.shields.io/badge/📽️%20Watch%20Video%20ReadMe-blue?style=for-the-badge)](https://drive.google.com/drive/folders/1weiJuFP9FC-QJP01EEKtV6S7NlzIrCSY?usp=sharing)
+[Video Explanation Link](https://library-management-server-main.vercel.app/)
 
 **🚀 Features**
 
@@ -48,12 +48,12 @@ src/
 │   │   ├── sendResponse.ts
 │   │   └── sendResponse.interface.ts
 │   └── config/
-│       └── db.ts               # MongoDB connection
-├── app.ts                      # Express app configuration
-├── server.ts                   # Application entry point
-└── .env                        # Environment variables
+│       └── db.ts
+├── app.ts
+├── server.ts
+└── .env
 ├── .gitignore
-├── eslint.config.mjs         # ESLint Flat Config (using @eslint/js +typescript-eslint)
+├── eslint.config.mjs
 ├── package.json
 ├── package-lock.json
 ├── readme.md
@@ -78,7 +78,7 @@ src/
 **🔰 Base URL**
 
 ```bash
-http://localhost:5000/api
+http://localhost:5000/
 ```
 
 **🌐 Home Route**
@@ -189,26 +189,3 @@ Returns an aggregated summary:
 - 📊 Aggregation Pipeline: Used in /api/borrow to compute total borrow count per book
 
 - 🔥 Error Handler: Catches and formats all application errors
-
-# 🛠️ Setup Instructions
-
-```bash
-
-
-# Clone the repo
-
-git clone https://github.com/yourname/library-management-api.git
-
-# Install dependencies
-
-cd library-management-api
-npm install
-
-# Create a .env file and add your MongoDB URI
-
-echo "MONGODB_URI=mongodb://localhost:27017/library" > .env
-
-# Start the server
-
-npm run dev
-```
