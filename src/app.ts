@@ -11,7 +11,6 @@ app.use(
     origin: (origin, callback) => {
       callback(null, origin || "*");
     },
-    // credentials: true // Allow credentials for cookies, authorization headers, etc.
   })
 );
 
@@ -26,8 +25,6 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/books", BookRoutes);
 app.use("/api/borrow", BorrowRoutes);
 
-// Handle 404 errors for undefined routes
-
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(404).json({
     success: false,
@@ -35,7 +32,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
-// Global error handler
 
 app.use(globalErrorHandler);
 
