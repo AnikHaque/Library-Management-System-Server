@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 
 import { sendResponse } from "../../utils/sendResponse";
-import { BookService } from "./book.service";
+import { bookServices } from "./book.service";
 
 export const addBook = async (
   req: Request,
@@ -9,7 +9,7 @@ export const addBook = async (
   next: NextFunction
 ) => {
   try {
-    const result = await BookService.insertBook(req.body);
+    const result = await bookServices.insertBook(req.body);
     sendResponse(res, {
       statusCode: 201,
       success: true,
