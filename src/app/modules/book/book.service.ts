@@ -26,8 +26,20 @@ export const getBookById = async (bookId: string) => {
   return Book.findById(bookId);
 };
 
+export const updateBook = async (
+  bookId: string,
+  payload: Partial<IBookNormal>
+) => {
+  const book = await Book.findByIdAndUpdate(bookId, payload, { new: true });
+  if (book && typeof book.updateAvailability === "function") {
+    await book.updateAvailability();
+  }
+  return book;
+};
+
 export const bookServices = {
   insertBook,
   getAllBooks,
   getBookById,
+  updateBook,
 };
