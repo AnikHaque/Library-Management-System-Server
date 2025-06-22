@@ -1,4 +1,3 @@
-// src/modules/book/book.service.ts
 import { FilterQuery } from "mongoose";
 import { IBookDocument, IBookNormal } from "./book.interface";
 import { Book } from "./book.model";
