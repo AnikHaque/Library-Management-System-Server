@@ -4,16 +4,12 @@ import { IBookDocument, IBookNormal } from "./book.interface";
 import { Book } from "./book.model";
 import { IBookQuery } from "./book.types";
 
-export const insertBook = async (payload: IBookNormal) => {
+const insertBook = async (payload: IBookNormal) => {
   const book = new Book(payload);
   return book.save();
 };
 
-export const BookService = {
-  insertBook,
-};
-
-export const getAllBooks = async (query: IBookQuery) => {
+const getAllBooks = async (query: IBookQuery) => {
   const filter: FilterQuery<IBookDocument> = {};
   if (query.filter) filter.genre = query.filter;
 
