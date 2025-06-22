@@ -35,7 +35,33 @@ const getAllBooksController = async (
   }
 };
 
+export const getBookById = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const result = await bookServices.getBookById(req.params.bookId);
+    if (!result) {
+      return sendResponse(res, {
+        statusCode: 404,
+        success: false,
+        message: `The book with id ${req.params.bookId} not found`,
+        data: null,
+      });
+    }
+    sendResponse(res, {
+      success: true,
+      message: "Book retrieved successfully",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const bookController = {
   addBook,
   getAllBooksController,
+  getBookById,
 };

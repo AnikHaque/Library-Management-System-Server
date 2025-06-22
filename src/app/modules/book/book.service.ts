@@ -22,7 +22,12 @@ const getAllBooks = async (query: IBookQuery) => {
     .limit(limit);
 };
 
+export const getBookById = async (bookId: string) => {
+  return Book.findById(bookId);
+};
+
 export const bookServices = {
   insertBook,
   getAllBooks,
+  getBookById,
 };
