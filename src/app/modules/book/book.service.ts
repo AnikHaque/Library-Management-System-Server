@@ -37,9 +37,14 @@ export const updateBook = async (
   return book;
 };
 
+export const deleteBook = async (bookId: string) => {
+  return Book.findByIdAndDelete(bookId);
+};
+
 export const bookServices = {
   insertBook,
   getAllBooks,
   getBookById,
   updateBook,
+  deleteBook,
 };
